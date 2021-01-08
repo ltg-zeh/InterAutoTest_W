@@ -11,6 +11,7 @@ def login():
     r = request.get(url,params=data)
     print(r)
 
+# 个人信息
 def info():
     url = "https://appdev.xpandago.com/app/member/user/user/list"
     headers = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLmtYvor5UtVEciLCJhdWRpZW5jZSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwidXNlcl9pZCI6MjUwNjYzLCJjcmVhdGVkIjoxNjA5OTE2ODkyMzk1LCJleHAiOjE2MTA1MjE2OTIsInVzZXJfZ3JvdXBfaWQiOm51bGx9.aE9EVt619DQO-Z8PufAEHuuZRmUzHBKFfaTWWoREj_CdHY1TJQmjROvxKZNJMBULQ9d-ZhslG3L8qqtvyjmu8Q"}
@@ -19,6 +20,7 @@ def info():
     r = request.get(url,headers=headers)
     print(r)
 
+# 商品列表
 def goodlist():
     url = "https://appdev.xpandago.com/app/goods/brand/brand/goodlist"
     data = {"brandId":"286","sidx":"person","order":"desc","page":"1"}
@@ -27,6 +29,7 @@ def goodlist():
     r = request.get(url,params=data)
     print(r)
 
+# 购物车
 def cart():
     url = "https://appdev.xpandago.com/app/shop/cart/buycar/saveNew"
     data = {"goodsId":"7238","num":"1","productId":"4697","goodType":"normal"}
@@ -36,6 +39,7 @@ def cart():
     r = request.post(url,data=data,headers=headers)
     print(r)
 
+# 订单
 def orderNo():
     url = "https://appdev.xpandago.com/app/order/order/order/addOrderToRedisNew"
     headers = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLmtYvor5UtVEciLCJhdWRpZW5jZSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwidXNlcl9pZCI6MjUwNjYzLCJjcmVhdGVkIjoxNjA5OTE2ODkyMzk1LCJleHAiOjE2MTA1MjE2OTIsInVzZXJfZ3JvdXBfaWQiOm51bGx9.aE9EVt619DQO-Z8PufAEHuuZRmUzHBKFfaTWWoREj_CdHY1TJQmjROvxKZNJMBULQ9d-ZhslG3L8qqtvyjmu8Q"}
