@@ -1,2 +1,38 @@
-name: "test_yaml"
-result: "sucess"
+# 字典
+#name: "test_yaml"
+#result: "sucess"
+
+#列表
+# ["a","b","c"]
+#- "a"
+#- "b"
+#- "c"
+
+# 字典嵌套字典
+# {person1:{"name"；"ltg","age":"10"}
+#  {person2:{"name":"zeh","age":"'9}
+#}
+#person1:
+#  name: ltg
+#  age: 10
+
+# 字典嵌套列表
+#person:
+#  - "a"
+#  - "b"
+
+# 列表嵌套列表
+#-
+#  - "a"
+#  - "b"
+#-
+#  - "c"
+#  - "d"
+
+# 列表嵌套字典
+-
+  name: ltg
+  age: 10
+-
+  name: zeh
+  age: 9

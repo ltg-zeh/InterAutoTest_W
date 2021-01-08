@@ -4,7 +4,6 @@
 
 import yaml
 
-with open("./data.yaml") as f:
+with open("./data.yaml",encoding='utf-8') as f:
     r = yaml.safe_load(f)
-    print(r)
     print(r)
