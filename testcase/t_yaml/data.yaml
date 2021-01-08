@@ -30,9 +30,16 @@
 #  - "d"
 
 # 列表嵌套字典
--
-  name: ltg
-  age: 10
--
-  name: zeh
-  age: 9
+#-
+#  name: ltg
+#  age: 10
+#-
+#  name: zeh
+#  age: 9
+
+---
+"用户名称1": "ltg"
+"age": "10"
+---
+"用户名称1": "zeh"
+"age": "9"
