@@ -49,9 +49,9 @@ class Request:
         res["code"] = code
         res["body"] = body
         return res
-    # 重构get方法
+    # get方法
     def get(self,url,**kwargs):
         return self.requests_api(url,method="get",**kwargs)
-    # 重构post方法
+    # post方法
     def post(self,url,**kwargs):
         return self.requests_api(url,method="post",**kwargs)
