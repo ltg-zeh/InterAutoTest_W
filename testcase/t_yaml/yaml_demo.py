@@ -3,14 +3,19 @@
 # 3.输出文件
 
 import yaml
+from utils.YamlUtils import YamlReader
 # 读取单个文件
 # with open("./data.yaml",encoding='utf-8') as f:
 #     r = yaml.safe_load(f)
 #     print(r)
 
 # 读取多个文件
-with open("./data.yaml","r",encoding='utf-8') as f:
+# with open("./data.yaml","r",encoding='utf-8') as f:
+#
+#     r = yaml.safe_load_all(f)
+#     for i in r:
+#         print(i)
 
-    r = yaml.safe_load_all(f)
-    for i in r:
-        print(i)
+# res = YamlReader("./data.yaml").data()
+res = YamlReader("./data.yaml").data_all()
+print(res)
