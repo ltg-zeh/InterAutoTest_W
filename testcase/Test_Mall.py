@@ -2,9 +2,13 @@ import requests
 from utils.RequestsUtils import requests_get
 from utils.RequestsUtils import requests_post
 from utils.RequestsUtils import Request
+from config.Conf import ConfigYaml
 # 登录
 def login():
-    url = "https://appdev.xpandago.com/app/member/login/register/login"
+    # url = "https://appdev.xpandago.com/app/member/login/register/login"
+    conf_y = ConfigYaml()
+    url_path = conf_y.get_conf_url()
+    url = url_path + "/app/member/login/register/login"
     data = {"mobile":"18539576908","password":"123456","areaCode":"+86"}
 
     request = Request()

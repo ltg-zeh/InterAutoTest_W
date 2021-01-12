@@ -1,4 +1,4 @@
 
 BASE:
   test:
-    url:"https://appdev.xpandago.com"
+    url: "https://appdev.xpandago.com"
