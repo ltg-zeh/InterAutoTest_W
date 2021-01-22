@@ -54,7 +54,7 @@ def orderNo():
 
 if __name__ == '__main__':
     login()
-    # info()
-    # goodlist()
-    # cart()
-    # orderNo()
+    info()
+    goodlist()
+    cart()
+    orderNo()
