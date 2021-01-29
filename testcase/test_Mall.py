@@ -1,10 +1,11 @@
 import requests
+import pytest
 from utils.RequestsUtils import requests_get
 from utils.RequestsUtils import requests_post
 from utils.RequestsUtils import Request
 from config.Conf import ConfigYaml
 # 登录
-def login():
+def test_login():
     # url = "https://appdev.xpandago.com/app/member/login/register/login"
     conf_y = ConfigYaml()
     url_path = conf_y.get_conf_url()
@@ -16,7 +17,7 @@ def login():
     print(r)
 
 # 个人信息
-def info():
+def test_info():
     url = "https://appdev.xpandago.com/app/member/user/user/list"
     headers = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLmtYvor5UtVEciLCJhdWRpZW5jZSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwidXNlcl9pZCI6MjUwNjYzLCJjcmVhdGVkIjoxNjExNjUxNTk0MjAyLCJleHAiOjE2MTIyNTYzOTQsInVzZXJfZ3JvdXBfaWQiOm51bGx9.TZGPxtIC-yNFuccWsM1jXffpAUcxqEDhfCC3EQcGsTXmEYEe3jcXCpl5oFKkWDX091onTJM7aP5qihxpGk8PPQ"}
 
@@ -25,7 +26,7 @@ def info():
     print(r)
 
 # 商品列表
-def goodlist():
+def test_goodlist():
     url = "https://appdev.xpandago.com/app/goods/brand/brand/goodlist"
     data = {"brandId":"286","sidx":"person","order":"desc","page":"1"}
 
@@ -34,7 +35,7 @@ def goodlist():
     print(r)
 
 # 购物车
-def cart():
+def test_cart():
     url = "https://appdev.xpandago.com/app/shop/cart/buycar/saveNew"
     data = {"goodsId":"7238","num":"1","productId":"4697","goodType":"normal"}
     headers = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLmtYvor5UtVEciLCJhdWRpZW5jZSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwidXNlcl9pZCI6MjUwNjYzLCJjcmVhdGVkIjoxNjExNjUxNTk0MjAyLCJleHAiOjE2MTIyNTYzOTQsInVzZXJfZ3JvdXBfaWQiOm51bGx9.TZGPxtIC-yNFuccWsM1jXffpAUcxqEDhfCC3EQcGsTXmEYEe3jcXCpl5oFKkWDX091onTJM7aP5qihxpGk8PPQ"}
@@ -44,7 +45,7 @@ def cart():
     print(r)
 
 # 订单
-def orderNo():
+def test_orderNo():
     url = "https://appdev.xpandago.com/app/order/order/order/addOrderToRedisNew"
     headers = {"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiLmtYvor5UtVEciLCJhdWRpZW5jZSI6ImUxMGFkYzM5NDliYTU5YWJiZTU2ZTA1N2YyMGY4ODNlIiwidXNlcl9pZCI6MjUwNjYzLCJjcmVhdGVkIjoxNjExNjUxNTk0MjAyLCJleHAiOjE2MTIyNTYzOTQsInVzZXJfZ3JvdXBfaWQiOm51bGx9.TZGPxtIC-yNFuccWsM1jXffpAUcxqEDhfCC3EQcGsTXmEYEe3jcXCpl5oFKkWDX091onTJM7aP5qihxpGk8PPQ"}
 
@@ -53,8 +54,9 @@ def orderNo():
     print(r)
 
 if __name__ == '__main__':
-    login()
-    info()
-    goodlist()
-    cart()
-    orderNo()
+    # login()
+    # info()
+    # goodlist()
+    # cart()
+    # orderNo()
+    pytest.main(["-s","test_Mall.py"])

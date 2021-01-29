@@ -23,4 +23,4 @@ class TestFunc():
         print("test_b")
 
 if __name__ == '__main__':
-    pytest.main("-s","pytest_func.py")
+    pytest.main(["-s","pytest_func.py"])
