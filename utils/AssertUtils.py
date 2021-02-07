@@ -6,5 +6,7 @@ class AssertUtil:
         self.log = my_log("AssertUtil")
     # 3.code相等
     def assert_code(self,):
+        pass
+        pass
     # 4.body相等
     # 5.body包含
